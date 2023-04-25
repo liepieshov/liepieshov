@@ -39,6 +39,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.ref }}
     - name: Close Issue
+      if: always()
       uses: peter-evans/close-issue@v3
       with:
         comment: "The move was commited"
