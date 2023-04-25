@@ -1,0 +1,23 @@
+name: render readme
+
+# Controls when the action will run
+on:
+  issue:
+    types: opened
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    - name: create readme md
+      run: |
+        echo "$date" | tee README.md
+    - name: commit rendered README
+      run: |
+        git add README.md
+        git commit -m "Re-build README.md" || echo "No changes to commit"
+        git push origin master || echo "No changes to commit"
