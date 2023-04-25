@@ -1,9 +1,7 @@
 import re
 import sys
 
-ISSUE_URL_TEMPLATE = (
-    "[` `](https://github.com/liepieshov/liepieshov/issues/new?title=move:{})"
-)
+ISSUE_URL_TEMPLATE = '<a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:{}">&nbsp;</a>'
 
 
 class State:
@@ -49,9 +47,9 @@ class State:
 
     def __str__(self) -> str:
         if self.is_winning:
-            state = State('-'* 9)
+            state = State("-" * 9)
             to_move = state.sign_to_move
-            cells = [state.format_cell(i) for i in range(9)] 
+            cells = [state.format_cell(i) for i in range(9)]
         else:
             to_move = self.sign_to_move
             cells = [self.format_cell(i) for i in range(9)]
