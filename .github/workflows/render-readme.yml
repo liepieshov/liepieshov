@@ -16,8 +16,12 @@ jobs:
     - name: create readme md
       run: |
         echo "$date" | tee README.md
+    - name: create readme md 2
+      run: |
+          touch READMEmd.md
     - name: commit rendered README
       run: |
+        git add READMEmd.md
         git add README.md
         git commit -m "Re-build README.md" || echo "No changes to commit"
         git push origin master || echo "No changes to commit"
