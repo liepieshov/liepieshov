@@ -58,7 +58,7 @@ class State:
 
         return """
 ## Play communal Tic Tac Toe with us🎲
-`{}` to move (click the empty space)
+`{}` to move (click the empty cell to move)
 |{}|{}|{}|
 |-|-|-|
 |{}|{}|{}|
