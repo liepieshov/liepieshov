@@ -2,7 +2,7 @@ import re
 import sys
 
 ISSUE_URL_TEMPLATE = (
-    "[&nbsp;](https://github.com/liepieshov/liepieshov/issues/new?title=move:{})"
+    "[` `](https://github.com/liepieshov/liepieshov/issues/new?title=move:{})"
 )
 
 
@@ -59,10 +59,27 @@ class State:
         return """
 ## Play communal Tic Tac Toe with us🎲
 `{}` to move (click the empty cell to move)
-|{}|{}|{}|
-|-|-|-|
-|{}|{}|{}|
-|{}|{}|{}|
+
+ <table>
+  <tr>
+    <th>{}</th>
+    <th>{}</th>
+    <th>{}</th>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td>{}</td>
+    <td>{}</td>
+    <td>{}</td>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td>{}</td>
+    <td>{}</td>
+    <td>{}</td>
+  </tr>
+</table>
+
 """.format(
             to_move, *cells
         )
