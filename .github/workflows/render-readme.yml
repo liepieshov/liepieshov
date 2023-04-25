@@ -2,7 +2,7 @@ name: render readme
 
 # Controls when the action will run
 on:
-  issue:
+  issues:
     types: opened
 
 jobs:
