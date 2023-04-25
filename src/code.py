@@ -1,5 +1,4 @@
 def main(title: str):
-    print(title)
     print("Hello World!")
 
 
