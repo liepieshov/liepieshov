@@ -1,7 +1,7 @@
 import re
 import sys
 
-ISSUE_URL_TEMPLATE = '<a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:{}">&nbsp;</a>'
+ISSUE_URL_TEMPLATE = '<a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:{}&template=custom.md">&nbsp;</a>'
 
 
 class State:
