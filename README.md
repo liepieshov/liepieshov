@@ -4,21 +4,21 @@
 
  <table>
   <tr>
-    <th><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:xo-x-ox--">&nbsp;</a></th>
-    <th>o</th>
-    <th><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:-oxx-ox--">&nbsp;</a></th>
+    <th><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:x--------">&nbsp;</a></th>
+    <th><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:-x-------">&nbsp;</a></th>
+    <th><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:--x------">&nbsp;</a></th>
   </tr>
   <tr></tr>
   <tr>
-    <td>x</td>
-    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:-o-xxox--">&nbsp;</a></td>
-    <td>o</td>
+    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:---x-----">&nbsp;</a></td>
+    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:----x----">&nbsp;</a></td>
+    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:-----x---">&nbsp;</a></td>
   </tr>
   <tr></tr>
   <tr>
-    <td>x</td>
-    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:-o-x-oxx-">&nbsp;</a></td>
-    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:-o-x-ox-x">&nbsp;</a></td>
+    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:------x--">&nbsp;</a></td>
+    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:-------x-">&nbsp;</a></td>
+    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:--------x">&nbsp;</a></td>
   </tr>
 </table>
 
