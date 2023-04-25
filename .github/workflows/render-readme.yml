@@ -43,4 +43,3 @@ jobs:
       uses: peter-evans/close-issue@v3
       with:
         comment: "The move was commited"
-

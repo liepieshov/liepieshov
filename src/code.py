@@ -2,10 +2,10 @@ import sys
 
 
 def main(title: str):
-    if title.isnumeric() and int(title) < (1 << 9):
-        print("Hello World!")
-    else:
+    if not title.isnumeric() or int(title) >= (1 << 9):
         sys.exit(1)
+    print("Hello World!")
+    print(title)
 
 
 if __name__ == "__main__":
