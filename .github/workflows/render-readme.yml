@@ -29,7 +29,7 @@ jobs:
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "github-actions[bot]"
+        git config --local user.name "${{ github.event.issue.author }}"
         git add README.md
         git commit -m "add move" || echo "no changes"
 
@@ -42,4 +42,4 @@ jobs:
       if: always()
       uses: peter-evans/close-issue@v3
       with:
-        comment: "The move was pushed"
+        comment: "The move was pushed by ${{ github.event.issue.author }}"
