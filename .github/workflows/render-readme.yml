@@ -11,17 +11,23 @@ jobs:
 
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+      with:
+        ref: ${{ github.head_ref }}
+        fetch-depth: 0
 
     - name: create readme md
       run: |
+        rm README.md
+        touch README.md
         echo "$date" | tee README.md
-    - name: create readme md 2
+    - name: Commit files
       run: |
-          touch READMEmd.md
-    - name: commit rendered README
-      run: |
-        git add READMEmd.md
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
         git add README.md
-        git commit -m "Re-build README.md" || echo "No changes to commit"
-        git push origin master || echo "No changes to commit"
+        git commit -a -m "Add changes"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        force_with_lease: true
