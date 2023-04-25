@@ -1,6 +1,5 @@
 name: render readme
 
-# Controls when the action will run
 on:
   issues:
     types: opened
@@ -8,6 +7,10 @@ on:
 jobs:
   render:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
 
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -15,17 +18,21 @@ jobs:
       with:
         persist-credentials: false
         fetch-depth: 0
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
 
-    - name: create readme md
-      run: |
-        rm README.md
-        touch README.md
-        echo "$date" | tee README.md
+    - name: update readme file
+      run: python src/code.py "${{ github.event.issue.title }}" > README.md
+
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "github-actions[bot]"
-        git commit -a -m "add move" || echo "no changes"
+        git add README.md
+        git commit -m "add move" || echo "no changes"
+
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
@@ -35,3 +42,4 @@ jobs:
       uses: peter-evans/close-issue@v3
       with:
         comment: "The move was commited"
+
