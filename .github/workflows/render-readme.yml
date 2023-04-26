@@ -13,33 +13,33 @@ jobs:
         python-version: ["3.10"]
 
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-      with:
-        persist-credentials: false
-        fetch-depth: 0
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
-      with:
-        python-version: ${{ matrix.python-version }}
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python-version }}
 
-    - name: update readme file
-      run: python src/code.py "${{ github.event.issue.title }}" > README.md
+      - name: update readme file
+        run: python src/code.py "${{ github.event.issue.title }}" > README.md
 
-    - name: Commit files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "${{ github.event.issue.user.login }}"
-        git add README.md
-        git commit -m "add move" || echo "no changes"
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "${{ github.event.issue.user.login }}"
+          git add README.md
+          git commit -m "add move" || echo "no changes"
 
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
-    - name: Close Issue
-      if: always()
-      uses: peter-evans/close-issue@v3
-      with:
-        comment: "The move was pushed by ${{ github.event.issue.user.login }}"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+      - name: Close Issue
+        if: always()
+        uses: peter-evans/close-issue@v3
+        with:
+          comment: "nice move @${{ github.event.issue.user.login }} 🎉 continue playing at https://github.com/liepieshov 🤹"
