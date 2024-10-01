@@ -4,21 +4,21 @@
 
  <table>
   <tr>
-    <th>x</th>
-    <th>o</th>
-    <th>o</th>
+    <th><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:x--------&template=make-a-move-template.md">&nbsp;</a></th>
+    <th><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:-x-------&template=make-a-move-template.md">&nbsp;</a></th>
+    <th><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:--x------&template=make-a-move-template.md">&nbsp;</a></th>
   </tr>
   <tr></tr>
   <tr>
-    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:xooxx-x-o&template=make-a-move-template.md">&nbsp;</a></td>
-    <td>x</td>
-    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:xoo-xxx-o&template=make-a-move-template.md">&nbsp;</a></td>
+    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:---x-----&template=make-a-move-template.md">&nbsp;</a></td>
+    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:----x----&template=make-a-move-template.md">&nbsp;</a></td>
+    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:-----x---&template=make-a-move-template.md">&nbsp;</a></td>
   </tr>
   <tr></tr>
   <tr>
-    <td>x</td>
-    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:xoo-x-xxo&template=make-a-move-template.md">&nbsp;</a></td>
-    <td>o</td>
+    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:------x--&template=make-a-move-template.md">&nbsp;</a></td>
+    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:-------x-&template=make-a-move-template.md">&nbsp;</a></td>
+    <td><a href="https://github.com/liepieshov/liepieshov/issues/new?title=move:--------x&template=make-a-move-template.md">&nbsp;</a></td>
   </tr>
 </table>
 
