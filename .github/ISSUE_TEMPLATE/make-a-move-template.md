@@ -1,7 +1,7 @@
 ---
 name: Make a move template
 about: Describe this issue template's purpose here.
-title: move:---------
+title: 
 labels: ''
 assignees: ''
 
